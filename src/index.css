@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Geologica:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  :root{
+    /* background-color: white; */
+  }
+  
+  body{
+    color: black;
+    background-color: white; 
+    font-family: "Geologica", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0,
+      "CRSV" 0,
+      "SHRP" 0;
+    }
+
+}
+
+@layer components{
+
+  .my-container{
+    @apply max-sm:px-5 mx-auto max-sm:w-full sm:w-[90%] md:w-[90%] lg:w-[90%] xl:w-[1200px]
+  }
+
+  .sidebar{
+    @apply w-64 bg-orange-800 rounded-e-3xl h-full pt-5 flex flex-col justify-between
+  }
+
+  @keyframes pop-in {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in {
+    from{
+      transform: translateX(-100%);
+    }
+    to{
+      transform: translateX(0%);
+    }
+  }
+
+  .tooltip-container{
+    @apply animate-[pop-in_.3s] absolute top-[-30%] translate-y-[-100%] left-0 -z-10  flex w-full justify-between  text-xs
+  }
+  
+}
