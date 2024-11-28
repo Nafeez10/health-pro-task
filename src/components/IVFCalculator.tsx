@@ -33,7 +33,7 @@ const IVFCalculator = () =>{
         
         let timer = setTimeout(()=>{
             setShowSlideNum(false);
-        },2000)
+        },1000)
 
         return ()=>{
             clearTimeout(timer);
